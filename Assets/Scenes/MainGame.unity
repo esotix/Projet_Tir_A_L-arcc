@@ -3296,7 +3296,7 @@ MonoBehaviour:
   StartPress:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Start Press
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 3da20d1e-be79-43ab-baaa-f88bd0fbf630

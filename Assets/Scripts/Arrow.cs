@@ -66,18 +66,34 @@ public class Arrows : MonoBehaviour
     {
         if (Physics.Linecast(_lastPosition, tip.position, out RaycastHit hitInfo))
         {
-            if (hitInfo.transform.gameObject.layer != 8)
+            // Vérifie que l'objet touché n'a pas le tag "Cible"
+            if (!hitInfo.transform.CompareTag("Cible"))
             {
+                // Si l'objet a un Rigidbody, applique une force à l'objet touché
                 if (hitInfo.transform.TryGetComponent(out Rigidbody body))
                 {
                     _rigidBody.interpolation = RigidbodyInterpolation.None;
                     transform.parent = hitInfo.transform;
                     body.AddForce(_rigidBody.velocity, ForceMode.Impulse);
                 }
+
+                // Plante la flèche à la position exacte du point d'impact
+                transform.position = hitInfo.point - tip.localPosition;
+                transform.rotation = Quaternion.LookRotation(hitInfo.normal, Vector3.up);
+
+                // Stoppe la flèche
                 Stop();
+                Destroy(gameObject);
+            }
+            else
+            {
+                // Si l'objet est une cible, ne plante pas la flèche
+                Debug.Log("Collision avec une cible ignorée.");
             }
         }
     }
+
+
 
 
     private void Stop()

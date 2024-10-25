@@ -21,8 +21,16 @@ public class InGameMenu : MonoBehaviour
 
     public InputActionProperty StartPress;
 
-    void Start()
+    public List<Button> returnButtons;
+
+    // Start is called before the first frame update
+    private void Awake()
     {
+        menu.SetActive(false);
+    }
+    void Update()
+    {
+        menu.SetActive(true);
         if (StartPress.action.triggered)
         {
             ShowMenu();
@@ -32,6 +40,11 @@ public class InGameMenu : MonoBehaviour
         optionButton.onClick.AddListener(EnableOption);
         quitButton.onClick.AddListener(QuitGame);
         resumeButton.onClick.AddListener(ResumeGame);
+
+        foreach (var item in returnButtons)
+        {
+            item.onClick.AddListener(EnableMainMenu);
+        }
     }
 
     private void ShowMenu()

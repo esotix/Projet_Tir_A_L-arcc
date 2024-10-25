@@ -3,19 +3,19 @@ using UnityEngine;
 public class Cible : MonoBehaviour
 {
     private TargetSpawner spawner;
-    private AudioSource audioSource;
+    public AudioSource audioExplode;
     public GameObject explosionEffect;  // Référence au prefab du Particle System
     public float explosionDuration = 2f;  // Durée de l'explosion
 
     void Start()
     {
         spawner = FindObjectOfType<TargetSpawner>();
-        audioSource = GetComponent<AudioSource>();
+        audioExplode = GetComponent<AudioSource>();
 
         // Joue le son à l'apparition
-        if (audioSource != null)
+        if (audioExplode != null)
         {
-            audioSource.Play();
+            audioExplode.Play();
         }
     }
 
@@ -24,8 +24,13 @@ public class Cible : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Arrow"))
         {
+            if (audioExplode != null)
+            {
+                audioExplode.Play();
+            }
             // Déclenche l'effet de particules
             TriggerExplosion();
+
 
             // Détruit la cible
             Destroy(gameObject);

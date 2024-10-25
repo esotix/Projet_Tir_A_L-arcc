@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5508026198701968594}
   m_Layer: 0
   m_Name: Bleu
-  m_TagString: Cible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8241794562498557776}
   m_Layer: 0
   m_Name: Rouge
-  m_TagString: Cible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6606274887153741609}
   m_Layer: 0
   m_Name: Noir
-  m_TagString: Cible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 5269350900678410396}
   - component: {fileID: 8989994890808380400}
   - component: {fileID: 1525228345128241024}
+  - component: {fileID: 5711579157832430310}
   m_Layer: 0
   m_Name: Cible
   m_TagString: Cible
@@ -415,8 +416,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5464786
+  m_Center: {x: -0.0027711391, y: 0, z: 0.04924977}
 --- !u!114 &1525228345128241024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,8 +430,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562db165437b13e429b37b39c4884052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioExplode: {fileID: 5711579157832430310}
   explosionEffect: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 3}
   explosionDuration: 2
+--- !u!82 &5711579157832430310
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3345606249741982666}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7b64faace5e87004ea3ab65269f2fe5c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4293384067078823110
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +543,7 @@ GameObject:
   - component: {fileID: 9133941986502284497}
   m_Layer: 0
   m_Name: Blanc
-  m_TagString: Cible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -550,7 +648,7 @@ GameObject:
   - component: {fileID: 8982627888738016653}
   m_Layer: 0
   m_Name: Jaune
-  m_TagString: Cible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -564,7 +662,7 @@ Transform:
   m_GameObject: {fileID: 6972370264967260708}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.004, y: 0, z: 0.131}
+  m_LocalPosition: {x: 0, y: 0, z: 0.131}
   m_LocalScale: {x: 0.19501539, y: 0.19501539, z: 0.021451691}
   m_ConstrainProportionsScale: 0
   m_Children: []

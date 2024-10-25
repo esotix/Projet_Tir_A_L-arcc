@@ -83,6 +83,12 @@ public class Arrows : MonoBehaviour
 
                 // Stoppe la flèche
                 Stop();
+                Destroy(gameObject);
+            }
+            else
+            {
+                // Si l'objet est une cible, ne plante pas la flèche
+                Debug.Log("Collision avec une cible ignorée.");
             }
             else
             {

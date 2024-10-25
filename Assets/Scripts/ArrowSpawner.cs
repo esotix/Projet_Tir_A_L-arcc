@@ -54,7 +54,7 @@ public class ArrowSpawner : MonoBehaviour
 
     IEnumerator DelayedSpawn()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
 
         // Instancier la flèche
         _currentArrow = Instantiate(arrow, notch.transform);

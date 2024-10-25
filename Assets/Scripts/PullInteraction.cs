@@ -6,12 +6,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PullInteraction : XRBaseInteractable
 {
-    // Start is called before the first frame update
     public static event Action<float> PullActionReleased;
 
     public Transform start, end;
     public GameObject notch;
 
+    public AudioSource releaseSound;  // Ajoutez cette référence
     public float pullAmount { get; private set; } = 0.0f;
 
     private LineRenderer _lineRenderer;
@@ -31,6 +31,12 @@ public class PullInteraction : XRBaseInteractable
     public void Release()
     {
         PullActionReleased?.Invoke(pullAmount);
+
+        // Joue le son de relâchement si l'AudioSource est configurée
+        
+        releaseSound.Play();
+        
+
         pullingInteractor = null;
         pullAmount = 0f;
         notch.transform.localPosition = new Vector3(notch.transform.localPosition.x, notch.transform.localPosition.y, 0f);
@@ -52,7 +58,6 @@ public class PullInteraction : XRBaseInteractable
         }
     }
 
-
     private float CalculatePull(Vector3 pullPosition)
     {
         Vector3 pullDirection = pullPosition - start.position;
@@ -70,8 +75,4 @@ public class PullInteraction : XRBaseInteractable
         notch.transform.localPosition = new Vector3(notch.transform.localPosition.x, notch.transform.localPosition.y, linePosition.z + .2f);
         _lineRenderer.SetPosition(1, linePosition);
     }
-
-
-
-
 }

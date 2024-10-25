@@ -10,12 +10,10 @@ public class InGameMenu : MonoBehaviour
 {
     [Header("UI Pages")]
     public GameObject mainMenu;
-    public GameObject options;
     public GameObject menu;
 
     [Header("Main Menu Buttons")]
     public Button menuButton;
-    public Button optionButton;
     public Button quitButton;
     public Button resumeButton;
 
@@ -23,25 +21,15 @@ public class InGameMenu : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        if (Input.GetKeyDown("escape"))
-        {
-            ShowMenu();
-            Console.WriteLine("press");
-        }
+
         //Hook events
         menuButton.onClick.AddListener(MainMenu);
-        optionButton.onClick.AddListener(EnableOption);
         quitButton.onClick.AddListener(QuitGame);
         resumeButton.onClick.AddListener(ResumeGame);
     }
 
-    private void ShowMenu()
-    {
-        Debug.Log("button pressed");
-        menu.SetActive(true);
-    }
     public void QuitGame()
     {
         Application.Quit();
@@ -60,18 +48,11 @@ public class InGameMenu : MonoBehaviour
     public void HideAll()
     {
         mainMenu.SetActive(false);
-        options.SetActive(false);
     }
 
     public void EnableMainMenu()
     {
         mainMenu.SetActive(true);
-        options.SetActive(false);
-    }
-    public void EnableOption()
-    {
-        mainMenu.SetActive(false);
-        options.SetActive(true);
     }
    
 }

@@ -21,11 +21,14 @@ public class InGameMenu : MonoBehaviour
 
     public InputActionProperty StartPress;
 
+
+    // Start is called before the first frame update
     void Start()
     {
-        if (StartPress.action.triggered)
+        if (Input.GetKeyDown("escape"))
         {
             ShowMenu();
+            Console.WriteLine("press");
         }
         //Hook events
         menuButton.onClick.AddListener(MainMenu);

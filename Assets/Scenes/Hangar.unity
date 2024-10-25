@@ -5710,6 +5710,7 @@ Transform:
   - {fileID: 1868930824}
   - {fileID: 2140606603}
   - {fileID: 19311681}
+  - {fileID: 2083130252}
   m_Father: {fileID: 3283475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061706664 stripped
@@ -11147,7 +11148,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
-  returnButtons: []
 --- !u!114 &2083130249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11220,7 +11220,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083130247}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.783}
   m_LocalScale: {x: 0.0016010001, y: 0.0016010001, z: 0.0016010001}
   m_ConstrainProportionsScale: 0
@@ -11229,11 +11229,11 @@ RectTransform:
   - {fileID: 234127122}
   - {fileID: 2146618439}
   - {fileID: 1160193501}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1056292544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.384}
+  m_AnchoredPosition: {x: 0, y: 0.2664001}
   m_SizeDelta: {x: 1266.7478, y: 1050.6671}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2113075605 stripped
@@ -11449,6 +11449,7 @@ GameObject:
   - component: {fileID: 2140606606}
   - component: {fileID: 2140606605}
   - component: {fileID: 2140606604}
+  - component: {fileID: 2140606607}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: LeftHand
@@ -11809,6 +11810,39 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -1636515391019944688, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &2140606607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140606602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19efa3943d3eb6d4ab3015885639bf7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 2083130247}
+  StartPress:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Start Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 82a8a382-174c-4592-a7e2-e343ea31452e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 9434e452-0dcd-471d-a8a9-3840bbc79df4
+        m_Path: <XRController>{LeftHand}/primaryButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Start Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &2146618438
 GameObject:
   m_ObjectHideFlags: 0
@@ -11869,7 +11903,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1012726236}
   - {fileID: 331021575}
-  - {fileID: 2083130252}
   - {fileID: 895394718}
   - {fileID: 3283475}
   - {fileID: 1785909380}

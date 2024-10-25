@@ -8,6 +8,8 @@ TagManager:
   - LeftHand
   - RightHand
   - Menu
+  - Arrow
+  - Cible
   layers:
   - Default
   - TransparentFX

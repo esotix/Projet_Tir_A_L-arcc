@@ -90,11 +90,6 @@ public class Arrows : MonoBehaviour
                 // Si l'objet est une cible, ne plante pas la flèche
                 Debug.Log("Collision avec une cible ignorée.");
             }
-            else
-            {
-                // Si l'objet est une cible, ne plante pas la flèche
-                Debug.Log("Collision avec une cible ignorée.");
-            }
         }
     }
 
